@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Olive — Wood-Fire Mediterranean Kitchen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="site-header" id="top">
+  <a class="logo" href="#top" aria-label="Ember and Olive, home">
+    <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M20 4C20 4 11 14 11 22.5C11 28.8 15 33 20 33C25 33 29 28.8 29 22.5C29 19 27.5 15.8 25.8 13.4C25.8 16 24.6 18 22.8 18.6C23.6 16.2 22.6 12.6 20 4Z" fill="var(--gold)"/>
+      <path d="M8 30C8 30 13 26 20 26C27 26 32 30 32 30" stroke="var(--olive-light)" stroke-width="1.4" stroke-linecap="round"/>
+    </svg>
+    <span>Ember <em>&amp;</em> Olive</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#story">Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn btn-ghost nav-cta" href="#reserve">Reserve a table</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#story">Story</a>
+  <a href="#menu">Menu</a>
+  <a href="#reserve">Reserve</a>
+  <a href="#visit">Visit</a>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow" data-reveal>Charcoal Street, Coastal Kitchen</p>
+      <h1 class="hero-title" aria-label="Wood. Fire. Olive oil.">
+        <span class="line" data-word>Wood.</span>
+        <span class="line" data-word>Fire.</span>
+        <span class="line accent" data-word>Olive&nbsp;oil.</span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        A Mediterranean table built around one hearth — grilled slowly, dressed simply,
+        served the way the coast has done it for three thousand years.
+      </p>
+      <div class="hero-actions" data-reveal>
+        <a href="#reserve" class="btn btn-solid">Reserve a table</a>
+        <a href="#menu" class="btn btn-text">View the menu <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+
+    <svg class="hero-flame" width="260" height="340" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <filter id="flameTurb" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="2" seed="7" result="noise">
+            <animate attributeName="baseFrequency" dur="9s" values="0.012 0.05;0.017 0.09;0.012 0.05" repeatCount="indefinite"/>
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="18"/>
+        </filter>
+        <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#B4471F"/>
+          <stop offset="45%" stop-color="var(--gold)"/>
+          <stop offset="100%" stop-color="#F4D9A0"/>
+        </linearGradient>
+      </defs>
+      <g filter="url(#flameTurb)">
+        <path d="M130 330C70 330 45 280 45 230C45 175 95 120 110 60C118 30 120 15 118 0C150 25 175 75 175 130C175 110 190 95 195 80C210 115 215 165 195 210C215 195 225 170 227 150C240 200 220 270 165 305C185 300 205 285 215 265C210 305 175 330 130 330Z" fill="url(#flameGrad)" opacity="0.92"/>
+      </g>
+    </svg>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Slow-Roasted&nbsp;</span><span>Charred Citrus&nbsp;</span><span>Stone-Milled Oil&nbsp;</span><span>Open Hearth&nbsp;</span><span>Coastal Catch&nbsp;</span><span>Wood Smoke&nbsp;</span>
+      <span>Slow-Roasted&nbsp;</span><span>Charred Citrus&nbsp;</span><span>Stone-Milled Oil&nbsp;</span><span>Open Hearth&nbsp;</span><span>Coastal Catch&nbsp;</span><span>Wood Smoke&nbsp;</span>
+    </div>
+  </div>
+
+  <section class="story" id="story">
+    <div class="story-media" aria-hidden="true">
+      <svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" class="story-art">
+        <rect width="400" height="480" rx="4" fill="var(--surface-2)"/>
+        <circle cx="200" cy="180" r="120" fill="none" stroke="var(--gold)" stroke-width="1"/>
+        <path d="M110 300 C150 260 250 260 290 300 C270 360 130 360 110 300Z" fill="var(--olive)"/>
+        <ellipse cx="200" cy="180" rx="70" ry="20" fill="var(--gold)" opacity="0.85"/>
+        <g stroke="var(--ivory)" stroke-width="1.2" opacity="0.5">
+          <path d="M160 175 q40 -18 80 0"/>
+          <path d="M160 185 q40 -14 80 0"/>
+        </g>
+        <text x="200" y="440" text-anchor="middle" class="story-art-label">EST. HEARTH No. 1</text>
+      </svg>
+    </div>
+    <div class="story-copy">
+      <p class="eyebrow" data-reveal>Our story</p>
+      <h2 data-reveal>One fire. No shortcuts.</h2>
+      <p data-reveal>
+        Ember &amp; Olive started as a single wood-fired hearth on a coastal terrace, cooking
+        whatever the boats and the market brought in that morning. We've kept it that way —
+        one heat source, a short menu, and ingredients that don't need much done to them.
+      </p>
+      <p data-reveal>
+        The olive oil is pressed at a single grove we've bought from since we opened.
+        The bread is baked twice a day in the same oven that roasts the lamb.
+        Nothing on the table has travelled further than the coastline it came from.
+      </p>
+      <div class="story-stats">
+        <div><strong>1</strong><span>hearth, always lit</span></div>
+        <div><strong>14</strong><span>years, one grove</span></div>
+        <div><strong>6am</strong><span>market run, daily</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <p class="eyebrow center" data-reveal>The table</p>
+    <h2 class="center" data-reveal>Tonight's menu</h2>
+
+    <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+      <button class="tab-btn active" role="tab" aria-selected="true" data-tab="small">Small Plates</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="mains">Mains</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="dolci">Dolci</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="drinks">Drinks</button>
+    </div>
+
+    <div class="menu-panels">
+
+      <ul class="menu-list active" data-panel="small">
+        <li><div class="mi-name">Charred Octopus <span class="dots"></span> <span class="mi-price">18</span></div><p class="mi-desc">Smoked paprika, crushed potato, salsa verde</p></li>
+        <li><div class="mi-name">Whipped Feta <span class="dots"></span> <span class="mi-price">11</span></div><p class="mi-desc">Hot honey, thyme, grilled sourdough</p></li>
+        <li><div class="mi-name">Embered Eggplant <span class="dots"></span> <span class="mi-price">13</span></div><p class="mi-desc">Tahini, pomegranate, burnt lemon</p></li>
+        <li><div class="mi-name">Grilled Prawns <span class="dots"></span> <span class="mi-price">19</span></div><p class="mi-desc">Chili oil, garlic, flatbread</p></li>
+      </ul>
+
+      <ul class="menu-list" data-panel="mains">
+        <li><div class="mi-name">Whole Roasted Branzino <span class="dots"></span> <span class="mi-price">36</span></div><p class="mi-desc">Fennel, olive, coastal herbs</p></li>
+        <li><div class="mi-name">Slow Lamb Shoulder <span class="dots"></span> <span class="mi-price">42</span></div><p class="mi-desc">Eight hours over embers, yogurt, sumac</p></li>
+        <li><div class="mi-name">Hearth Chicken <span class="dots"></span> <span class="mi-price">29</span></div><p class="mi-desc">Preserved lemon, charred onion</p></li>
+        <li><div class="mi-name">Grilled Seasonal Vegetables <span class="dots"></span> <span class="mi-price">24</span></div><p class="mi-desc">Almond romesco, mint</p></li>
+      </ul>
+
+      <ul class="menu-list" data-panel="dolci">
+        <li><div class="mi-name">Olive Oil Cake <span class="dots"></span> <span class="mi-price">10</span></div><p class="mi-desc">Citrus glaze, sea salt</p></li>
+        <li><div class="mi-name">Charred Fig <span class="dots"></span> <span class="mi-price">11</span></div><p class="mi-desc">Honey mascarpone, pistachio</p></li>
+        <li><div class="mi-name">Dark Chocolate Semifreddo <span class="dots"></span> <span class="mi-price">12</span></div><p class="mi-desc">Espresso, orange peel</p></li>
+      </ul>
+
+      <ul class="menu-list" data-panel="drinks">
+        <li><div class="mi-name">Coastal White, House Blend <span class="dots"></span> <span class="mi-price">14</span></div><p class="mi-desc">Glass — bright, saline, cold</p></li>
+        <li><div class="mi-name">Smoked Negroni <span class="dots"></span> <span class="mi-price">16</span></div><p class="mi-desc">Charred orange, hearth ice</p></li>
+        <li><div class="mi-name">Herb &amp; Citrus Soda <span class="dots"></span> <span class="mi-price">7</span></div><p class="mi-desc">Non-alcoholic, rosemary, grapefruit</p></li>
+      </ul>
+
+    </div>
+    <p class="menu-note" data-reveal>Menu changes with the boats and the market. This is tonight's, not always.</p>
+  </section>
+
+  <section class="gallery" aria-label="A taste of the kitchen">
+    <div class="g-tile g-large">
+      <span>Whole Roasted Branzino</span>
+    </div>
+    <div class="g-tile g-olive"><span>Stone-Milled Oil</span></div>
+    <div class="g-tile g-char"><span>Open Hearth</span></div>
+    <div class="g-tile g-citrus"><span>Charred Citrus</span></div>
+  </section>
+
+  <section class="reserve" id="reserve">
+    <div class="reserve-inner">
+      <p class="eyebrow" data-reveal>Book ahead</p>
+      <h2 data-reveal>Reserve your table</h2>
+      <p class="reserve-copy" data-reveal>The hearth seats forty. We hold most tables for walk-ins after 9 — but for the earlier hours, a reservation is the surer bet.</p>
+
+      <form class="reserve-form" data-reveal onsubmit="return false;">
+        <div class="field">
+          <label for="r-date">Date</label>
+          <input id="r-date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="r-time">Time</label>
+          <select id="r-time" required>
+            <option value="">Select</option>
+            <option>17:30</option><option>18:00</option><option>18:30</option>
+            <option>19:00</option><option>19:30</option><option>20:00</option>
+            <option>20:30</option><option>21:00</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="r-party">Party</label>
+          <select id="r-party" required>
+            <option value="">Select</option>
+            <option>2 guests</option><option>3 guests</option><option>4 guests</option>
+            <option>5 guests</option><option>6+ guests</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-solid reserve-submit">
+          <span>Find a table</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="visit-grid">
+      <div class="visit-block">
+        <p class="eyebrow" data-reveal>Hours</p>
+        <ul class="hours-list" data-reveal>
+          <li><span>Tue – Thu</span><span>17:30 – 22:00</span></li>
+          <li><span>Fri – Sat</span><span>17:30 – 23:00</span></li>
+          <li><span>Sunday</span><span>13:00 – 21:00</span></li>
+          <li><span>Monday</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="visit-block">
+        <p class="eyebrow" data-reveal>Find us</p>
+        <address data-reveal>
+          19 Charcoal Street<br>
+          Harbor District<br>
+          Open coastline, second terrace
+        </address>
+        <a class="btn btn-text" href="#" data-reveal>Get directions <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="visit-block">
+        <p class="eyebrow" data-reveal>Contact</p>
+        <p data-reveal>+1 (555) 014 – 2288<br>hello@emberandolive.co</p>
+        <p class="visit-note" data-reveal>For parties over ten, call rather than book online.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <a class="logo" href="#top">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M20 4C20 4 11 14 11 22.5C11 28.8 15 33 20 33C25 33 29 28.8 29 22.5C29 19 27.5 15.8 25.8 13.4C25.8 16 24.6 18 22.8 18.6C23.6 16.2 22.6 12.6 20 4Z" fill="var(--gold)"/>
+      </svg>
+      <span>Ember <em>&amp;</em> Olive</span>
+    </a>
+    <div class="footer-news">
+      <label for="news-email">Notes from the kitchen, occasionally</label>
+      <div class="news-row">
+        <input id="news-email" type="email" placeholder="your@email.com">
+        <button class="btn btn-outline" type="button">Sign up</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ember &amp; Olive. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Reservations partner">Reservations</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
